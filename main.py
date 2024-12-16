@@ -1,21 +1,26 @@
-s = str(input("Введите выражение типа a b c , где a и c - целые числа, а b - операция +, -, *, / "))
+def main():
 
-d=s.split()
+    try:
+        s = str(input("Введите выражение типа a b c , где a и c - целые числа, а b - операция +, -, *, / "))
 
-if len(d) == 3:
-    a, b, c = s.split()
-    a = int(a)
-    c = int(c)
+        d = s.split()
 
-    if (a in range(1, 11)) & isinstance(a, int) & (b == "+") & (c in range(1, 11)) & isinstance(c, int):
-        print(a + c)
-    elif  (a in range(1, 11)) & isinstance(a, int) & (b == "-") & (c in range(1, 11)) & isinstance(c, int):
-        print(a - c)
-    elif  (a in range(1, 11)) & isinstance(a, int) & (b == "*") & (c in range(1, 11)) & isinstance(c, int):
-        print(a * c)
-    elif (a in range(1, 11)) & isinstance(a, int) & (b == "/") & (c in range(1, 11)) & isinstance(c, int):
-        print(a // c)
-    else:
-        print("throws Exception")
+        if len(d) == 3:
+            a, b, c = s.split()
+            a = int(a)
+            c = int(c)
+
+            if (a in range(1, 11)) & isinstance(a, int) & (b == "+") & (c in range(1, 11)) & isinstance(c, int):
+                print(str(a + c))
+            elif (a in range(1, 11)) & isinstance(a, int) & (b == "-") & (c in range(1, 11)) & isinstance(c, int):
+                print(str(a - c))
+            elif (a in range(1, 11)) & isinstance(a, int) & (b == "*") & (c in range(1, 11)) & isinstance(c, int):
+                print(str(a * c))
+            elif (a in range(1, 11)) & isinstance(a, int) & (b == "/") & (c in range(1, 11)) & isinstance(c, int):
+                print(str(a // c))
+    except:
+        print("throws exceptinon")
+main()
+
 
 
